@@ -39,3 +39,7 @@ int Queue::dequeue() {
 bool Queue::is_empty() {
   return backIndex == -1 || frontIndex == -1;
 }
+
+bool Queue::is_full() {
+  return backIndex >= QUEUE_MAX_SIZE - 1;
+}

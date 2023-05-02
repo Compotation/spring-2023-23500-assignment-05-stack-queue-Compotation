@@ -21,5 +21,7 @@ public:
 
   bool is_empty();
 
+  bool is_full();
+
   std::string toString();
 };

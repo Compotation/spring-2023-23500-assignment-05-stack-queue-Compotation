@@ -69,3 +69,13 @@ TEST_CASE("empty") {
   Queue *q2 = new Queue();
   CHECK(q->is_empty());
 }
+
+
+TEST_CASE("full") {
+  Queue *q = new Queue();
+  CHECK_FALSE(q->is_full());
+  for (int i = 0; i < 10; i++) {
+    q->enqueue(2);
+  }
+  CHECK(q->is_full());
+}
