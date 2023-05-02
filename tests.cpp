@@ -79,3 +79,20 @@ TEST_CASE("full") {
   }
   CHECK(q->is_full());
 }
+
+TEST_CASE("exceptions") {
+  auto *s1 = new stack();
+  try {
+    s1->pop();
+  } catch (int e) {
+    std::cerr << "error: " << e << " (empty stack)\n";
+  }
+  for (int i = 0; i < 4999; i++) {
+    s1->push("");
+  }
+  try {
+    s1->push("");
+  } catch (int e) {
+    std::cerr << "error: " << e << " (full stack)\n";
+  }
+}
