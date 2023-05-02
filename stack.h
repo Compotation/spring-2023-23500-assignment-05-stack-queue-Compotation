@@ -19,7 +19,7 @@ class stack{
   std::string pop(); // remove and return an item from the top of the stack
   std::string top(); // returns but doesn't remove the value on top
   bool is_empty(); // returns true if stack is empty
-    
+  std::string toString();
   /*
 
     additional common operataions:

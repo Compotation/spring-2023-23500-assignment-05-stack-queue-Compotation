@@ -39,3 +39,7 @@ stack::stack() {
 stack::~stack() {
   delete helperList;
 }
+
+std::string stack::toString() {
+  return helperList->toString();
+}
