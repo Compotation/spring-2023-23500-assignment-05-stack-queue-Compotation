@@ -1,32 +1,29 @@
 #include "stack.h"
 
 void stack::push(std::string item){
-//  if (topindex >= 5){
-//    throw STACK_ERR_FULL;
-//  }
+  if (helperList->length() >= MAX_SIZE-1){
+    throw STACK_ERR_FULL;
+  }
   
   helperList->insert(item);
 }
 
 std::string stack::pop(){
-//  if (topindex <= 0){
-//    throw STACK_ERR_EMPTY;
-//  }
-
-  if (helperList->length() == 0) {
-    return "empty";
+  if (is_empty()){
+    throw STACK_ERR_EMPTY;
   }
+
   helperList->remove(0);
-  if (helperList->length() == 0) {
+  if (is_empty()) {
     return "empty";
   }
   return helperList->getHead()->getData();
 }
 
 std::string stack::top(){
-//  if (topindex <= 0){
-//    throw STACK_ERR_EMPTY;
-//  }
+  if (is_empty()){
+    throw STACK_ERR_EMPTY;
+  }
   
   return helperList->getHead()->getData();
 }

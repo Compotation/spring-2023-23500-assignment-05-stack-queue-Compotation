@@ -5,6 +5,7 @@
 #define STACK_ERR_EMPTY 1
 #define STACK_ERR_FULL 2
 #define STACK_ERR_OTHER 4
+const int MAX_SIZE = 5000;
 
 
 class stack{
