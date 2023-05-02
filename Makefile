@@ -1,4 +1,4 @@
-OBJECTS=List.o Node.o stack.o
+OBJECTS=List.o Node.o stack.o Queue.o
 CXXFLAGS=-g
 
 all: main.o $(OBJECTS)
@@ -20,5 +20,6 @@ stack.o: stack.cpp stack.h
 
 tests.o: tests.cpp doctest.h
 
+Queue.o: Queue.cpp Queue.h
 clean:
 	rm -f main tests *.o
