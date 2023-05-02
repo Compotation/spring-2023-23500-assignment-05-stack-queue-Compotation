@@ -1,6 +1,6 @@
 #include "stack.h"
 
-void stack::push(int item){
+void stack::push(std::string item){
   if (topindex >= 5){
     throw STACK_ERR_FULL;
   }
