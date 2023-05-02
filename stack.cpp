@@ -12,10 +12,9 @@ std::string stack::pop(){
   if (topindex <= 0){
     throw STACK_ERR_EMPTY;
   }
-  
-  int tmp = a[topindex-1];
-  topindex--;
-  return tmp;
+
+  helperList->remove(0);
+  return helperList->getHead()->getData();
 }
 
 std::string stack::top(){
@@ -23,7 +22,7 @@ std::string stack::top(){
     throw STACK_ERR_EMPTY;
   }
   
-  return a[topindex-1];
+  return helperList->getHead()->getData();
 }
 
 bool stack::is_empty(){
