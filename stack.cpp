@@ -28,3 +28,11 @@ std::string stack::top(){
 bool stack::is_empty(){
   return helperList->length() == 0;
 }
+
+stack::stack() {
+  helperList = new List();
+}
+
+stack::~stack() {
+  delete helperList;
+}

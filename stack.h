@@ -12,6 +12,8 @@ class stack{
   List *helperList;
 
  public:
+  stack();
+  ~stack();
   void push(std::string); // add an item to the top
   std::string pop(); // remove and return an item from the top of the stack
   std::string top(); // returns but doesn't remove the value on top
