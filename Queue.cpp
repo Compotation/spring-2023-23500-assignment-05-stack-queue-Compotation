@@ -32,5 +32,6 @@ int Queue::front() {
 
 int Queue::dequeue() {
   vec.erase(vec.begin());
+  backIndex--;
   return vec[frontIndex];
 }
