@@ -57,3 +57,15 @@ TEST_CASE("dequeue") {
   q->enqueue(10);
   CHECK_EQ(q->dequeue(), 3);
 }
+
+TEST_CASE("empty") {
+  Queue *q = new Queue();
+  q->enqueue(2);
+  q->enqueue(3);
+  q->dequeue();
+  q->dequeue();
+  CHECK(q->is_empty());
+
+  Queue *q2 = new Queue();
+  CHECK(q->is_empty());
+}

@@ -19,5 +19,7 @@ public:
 
   int dequeue();
 
+  bool is_empty();
+
   std::string toString();
 };

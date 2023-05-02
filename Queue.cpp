@@ -35,3 +35,7 @@ int Queue::dequeue() {
   backIndex--;
   return vec[frontIndex];
 }
+
+bool Queue::is_empty() {
+  return backIndex == -1 || frontIndex == -1;
+}
