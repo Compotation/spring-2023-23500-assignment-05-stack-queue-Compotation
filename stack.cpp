@@ -8,7 +8,7 @@ void stack::push(std::string item){
   helperList->insert(item);
 }
 
-int stack::pop(){
+std::string stack::pop(){
   if (topindex <= 0){
     throw STACK_ERR_EMPTY;
   }
@@ -18,7 +18,7 @@ int stack::pop(){
   return tmp;
 }
 
-int stack::top(){
+std::string stack::top(){
   if (topindex <= 0){
     throw STACK_ERR_EMPTY;
   }
