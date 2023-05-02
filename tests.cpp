@@ -10,3 +10,14 @@ TEST_CASE("push") {
   s->push("no");
   CHECK_EQ(s->toString(), "no-->hi-->nullptr");
 }
+
+TEST_CASE("pop") {
+  stack *s = new stack();
+  s->push("hi");
+  s->pop();
+  CHECK_EQ(s->toString(), "nullptr");
+  s->push("hi");
+  s->push("no");
+  s->pop();
+  CHECK_EQ(s->toString(), "hi-->nullptr");
+}
