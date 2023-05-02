@@ -15,5 +15,7 @@ public:
 
   void enqueue(int);
 
+  int front();
+
   std::string toString();
 };

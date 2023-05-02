@@ -41,3 +41,11 @@ TEST_CASE("enqueue") {
   q->enqueue(10);
   CHECK_EQ(q->toString(), "2,3,10");
 }
+
+TEST_CASE("front") {
+  Queue *q = new Queue();
+  q->enqueue(2);
+  q->enqueue(3);
+  q->enqueue(10);
+  CHECK_EQ(q->front(), 2);
+}

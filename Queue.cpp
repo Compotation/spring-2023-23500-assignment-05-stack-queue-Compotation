@@ -25,3 +25,7 @@ std::string Queue::toString() {
   str.pop_back();
   return str;
 }
+
+int Queue::front() {
+  return vec[frontIndex];
+}
