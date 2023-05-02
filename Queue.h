@@ -17,5 +17,7 @@ public:
 
   int front();
 
+  int dequeue();
+
   std::string toString();
 };

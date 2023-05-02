@@ -49,3 +49,11 @@ TEST_CASE("front") {
   q->enqueue(10);
   CHECK_EQ(q->front(), 2);
 }
+
+TEST_CASE("dequeue") {
+  Queue *q = new Queue();
+  q->enqueue(2);
+  q->enqueue(3);
+  q->enqueue(10);
+  CHECK_EQ(q->dequeue(), 3);
+}

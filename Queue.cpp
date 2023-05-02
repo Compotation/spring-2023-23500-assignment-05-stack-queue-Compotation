@@ -29,3 +29,8 @@ std::string Queue::toString() {
 int Queue::front() {
   return vec[frontIndex];
 }
+
+int Queue::dequeue() {
+  vec.erase(vec.begin());
+  return vec[frontIndex];
+}
