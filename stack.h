@@ -9,15 +9,7 @@
 
 class stack{
  private:
-  // this is bad practice of hard coding the
-  // max array size
-  // just here for demo purposes
-
   List *helperList;
-
-  int a[5];
-  int topindex=0;
-  
 
  public:
   void push(std::string); // add an item to the top
