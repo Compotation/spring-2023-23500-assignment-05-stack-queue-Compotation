@@ -13,7 +13,13 @@ std::string stack::pop(){
 //    throw STACK_ERR_EMPTY;
 //  }
 
+  if (helperList->length() == 0) {
+    return "empty";
+  }
   helperList->remove(0);
+  if (helperList->length() == 0) {
+    return "empty";
+  }
   return helperList->getHead()->getData();
 }
 
