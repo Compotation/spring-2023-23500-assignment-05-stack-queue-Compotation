@@ -26,3 +26,9 @@ TEST_CASE("empty") {
   stack *s = new stack();
   CHECK(s->is_empty());
 }
+
+TEST_CASE("top") {
+  stack *s = new stack();
+  s->push("hi");
+  CHECK_EQ(s->top(), "hi");
+}
