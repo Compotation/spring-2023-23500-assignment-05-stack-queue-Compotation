@@ -26,5 +26,5 @@ std::string stack::top(){
 }
 
 bool stack::is_empty(){
-  return topindex==0;
+  return helperList->length() == 0;
 }
