@@ -15,7 +15,7 @@ class List{
 
   std::string toString(); // for testing purposes
   void remove(int loc);
-
+  Node *getHead();
   /*
     
 

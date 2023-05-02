@@ -148,3 +148,7 @@ std::string List::toString(){
   result = result + "nullptr";
   return result;
 }
+
+Node *List::getHead() {
+  return head;
+}
