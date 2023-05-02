@@ -21,3 +21,8 @@ TEST_CASE("pop") {
   s->pop();
   CHECK_EQ(s->toString(), "hi-->nullptr");
 }
+
+TEST_CASE("empty") {
+  stack *s = new stack();
+  CHECK(s->is_empty());
+}
