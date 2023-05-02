@@ -1,5 +1,7 @@
 #pragma once
 
+#include "List.h"
+
 #define STACK_ERR_EMPTY 1
 #define STACK_ERR_FULL 2
 #define STACK_ERR_OTHER 4
@@ -10,6 +12,8 @@ class stack{
   // this is bad practice of hard coding the
   // max array size
   // just here for demo purposes
+
+  List *helperList;
 
   int a[5];
   int topindex=0;

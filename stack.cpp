@@ -5,8 +5,7 @@ void stack::push(std::string item){
     throw STACK_ERR_FULL;
   }
   
-  a[topindex] = item;
-  topindex++;
+  helperList->insert(item);
 }
 
 int stack::pop(){
